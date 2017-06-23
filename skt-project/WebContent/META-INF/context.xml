@@ -1,0 +1,9 @@
+<Context>
+	<Resource name="ds/test"
+	          type="javax.sql.DataSource"
+	          driverClassName="com.mysql.jdbc.Driver"
+	          url="jdbc:mysql://52.14.123.19/test"
+	          username="root"
+	          password="mariadb"
+	/>
+</Context>
