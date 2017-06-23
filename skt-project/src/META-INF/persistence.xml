@@ -6,7 +6,7 @@
 		<properties>
         
             <property name="javax.persistence.jdbc.url"     
-                      value="jdbc:mysql://192.168.98.129/ebs" />
+                      value="jdbc:mysql://52.14.123.19/lunch" />
             <property name="javax.persistence.jdbc.driver"
                       value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.user"
