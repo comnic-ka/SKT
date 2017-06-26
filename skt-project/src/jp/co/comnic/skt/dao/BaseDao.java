@@ -10,6 +10,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+
 import jp.co.comnic.skt.entity.Lunch;
 import jp.co.comnic.skt.entity.Review;
 
@@ -26,14 +27,13 @@ public class BaseDao {
 		return em.createQuery(query.select(root)).getResultList();
 	}
 	
+	
+	
+	
 	public <T> T findById(Class<T> entityClass, Serializable id) {
 		return em.find(entityClass, id);
 	}
-	
-	
-	public List<Lunch> findAll(CriteriaQuery query, Root root){
-		return null;
-	}
+
 	
 	public Review findKeyword(Class<Review> entityClass, String keyword){
 		return null;
@@ -43,8 +43,15 @@ public class BaseDao {
 		
 	}
 	
-	public void remove(Object entity){
-		
+	public void remove(Object entity) throws DaoException{
+		try {
+			tx.begin();
+			em.remove(entity);
+			tx.commit();
+		} catch (Exception e) {
+			throw new DaoException(e);
+		}
+	
 	}
 	
 	public void update(Object entity){
