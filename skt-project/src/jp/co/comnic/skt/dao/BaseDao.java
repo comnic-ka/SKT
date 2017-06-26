@@ -27,16 +27,11 @@ public class BaseDao {
 		return em.createQuery(query.select(root)).getResultList();
 	}
 	
-	
-	
-	
-	public <T> T findById(Class<T> entityClass, Serializable id) {
-		return em.find(entityClass, id);
-	}
+
 
 	
-	public Review findKeyword(Class<Review> entityClass, String keyword){
-		return null;
+	public Review findKeyword(Class<Review> entityClass, String review){
+		return em.find(entityClass, review);
 	}
 	
 	public void insert(Object entity){

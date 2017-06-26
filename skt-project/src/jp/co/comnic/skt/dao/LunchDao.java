@@ -19,8 +19,5 @@ public class LunchDao extends BaseDao {
 		return super.findAll(query, root);
 	}
 	
-	public Lunch findById(Integer id) {
-		return super.findById(Lunch.class, id);
-	}
-	
+
 }
