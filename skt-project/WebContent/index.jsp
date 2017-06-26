@@ -16,11 +16,8 @@
  	   -->
   
 	<div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
           <div class="masthead clearfix">
             <div class="inner">
               <h1 class="masthead-brand">お昼ご飯評価システム(仮)</h1>
@@ -32,9 +29,11 @@
                   <li><a href="lunch.jsp">お昼ご飯情報</a></li>
 
                 </ul>
+                
                   <p>Login user: ${loginUsername}
                   <a href="${ctxPath}/logout.do"> － Logout</a>
                   </p>
+                  
               </nav>
             </div>
           </div>
