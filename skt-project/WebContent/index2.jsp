@@ -36,7 +36,7 @@
             <p class="lead">お気に入りのお昼ご飯が見つかるかも。</p>
             <p class="lead">関戸キャップの渾身のシステム！！！</p>
             <p class="lead"><br>
-              <a href="sekido.html" class="btn btn-lg btn-default">今日のお昼ご飯</a>
+              <a href="today-lunch2.jsp" class="btn btn-lg btn-default">今日のお昼ご飯</a>
             </p>
           </div>
           
