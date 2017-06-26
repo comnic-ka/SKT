@@ -1,15 +1,10 @@
 package jp.co.comnic.skt.entity;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
-
-/**
- * The persistent class for the Account database table.
- * 
- */
 @Entity
-@NamedQuery(name="Account.findAll", query="SELECT a FROM Account a")
 public class Account implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -19,10 +14,6 @@ public class Account implements Serializable {
 	private String password;
 
 	private String username;
-
-	//bi-directional one-to-one association to Review
-	@OneToOne(mappedBy="account")
-	private Review review;
 
 	public Account() {
 	}
@@ -51,12 +42,9 @@ public class Account implements Serializable {
 		this.username = username;
 	}
 
-	public Review getReview() {
-		return this.review;
-	}
-
-	public void setReview(Review review) {
-		this.review = review;
+	@Override
+	public String toString() {
+		return "Account [email=" + email + "]";
 	}
 
 }
