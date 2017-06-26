@@ -52,6 +52,8 @@
         <input type= "submit" value = "ログイン">
      </form>
      
+     <p class="error">${error}</p>
+     
       <br><br>
       <a href="signup.jsp">新規登録</a>
      </div>

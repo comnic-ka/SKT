@@ -80,6 +80,8 @@ p .right {
   padding: 30px;
 }
 
+.error { color: red; }
+
 
 /*
  * Header
