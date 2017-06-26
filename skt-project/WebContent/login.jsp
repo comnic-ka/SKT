@@ -29,7 +29,7 @@
           </div>
 
     <div align="center">
-      <form method="POST" action= "index2.jsp">
+      <form method="POST" action= "login.do">
         <table>
          <tr>
           <td>
