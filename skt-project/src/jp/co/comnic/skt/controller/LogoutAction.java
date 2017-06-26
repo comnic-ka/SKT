@@ -12,6 +12,10 @@ public class LogoutAction implements Action {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
+			
+			request.getSession().invalidate(); // セッション管理を無効にする(HttpSessionオブジェクトの破棄)
+			response.sendRedirect("login"); // ログイン画面にリダイレクト
+			
 		return null;
 	}
 
