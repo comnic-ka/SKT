@@ -6,5 +6,6 @@ public class DaoException extends Exception {
 
 	public DaoException(Exception e) {
 		super("an exception occur in the DAO layer.", e);
+		
 	}
 }

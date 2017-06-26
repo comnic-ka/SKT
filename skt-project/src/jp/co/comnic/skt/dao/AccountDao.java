@@ -1,7 +1,5 @@
 package jp.co.comnic.skt.dao;
 
-import java.util.List;
-
 import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -15,10 +13,6 @@ public class AccountDao extends BaseDao {
 	private CriteriaQuery<Account> query = builder.createQuery(Account.class);
 	private Root<Account> root = query.from(Account.class);
 	
-	public List<Account> findAll() {
-		return super.findAll(query, root);
-	}
-
 	
 	
 	
