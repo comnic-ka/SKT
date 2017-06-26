@@ -24,9 +24,9 @@
               <nav>
                 <ul class="nav masthead-nav">
                 
-                  <li class="active"><a href="index.jsp">ホーム</a></li>
-                  <li><a href="login.jsp">ログイン</a></li>
-                  <li><a href="lunch.jsp">お昼ご飯情報</a></li>
+                   <li class="active"><a href="index2.jsp">ホーム</a></li>
+                  <li><a href="lunch2.jsp">お昼ご飯情報</a></li>
+                  <li><a href="edit.jsp">情報編集</a></li>
 
                 </ul>
                 
@@ -39,13 +39,7 @@
           </div>
 
           <div class="inner cover">
-            <h2 class="cover-heading">そうだ、お昼ご飯を探そう！</h2>
-            <p class="lead">今日のお昼ご飯に迷っているあなた。</p>
-            <p class="lead">お気に入りのお昼ご飯が見つかるかも。</p>
-            <p class="lead">関戸キャップの渾身のシステム！！！</p>
-            <p class="lead"><br>
-              <a href="today-lunch.jsp" class="btn btn-lg btn-default">今日のお昼ご飯</a>
-            </p>
+            <h2>今日のお昼ご飯</h2>
           </div>
           
         </div>
