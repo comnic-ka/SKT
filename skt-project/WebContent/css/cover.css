@@ -57,6 +57,15 @@ p .right {
   background-position: right bottom;
 }
 
+.login-panel {
+	margin: 0 auto;
+	width: 50%;
+}
+
+.login-user {
+	color: #8B0000;
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;

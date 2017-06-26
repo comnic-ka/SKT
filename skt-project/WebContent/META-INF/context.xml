@@ -1,8 +1,8 @@
 <Context>
-	<Resource name="ds/lunch"
+	<Resource name="ds/Lunch"
 	          type="javax.sql.DataSource"
 	          driverClassName="com.mysql.jdbc.Driver"
-	          url="jdbc:mysql://192.168.98.129/lunch"
+	          url="jdbc:mysql://192.168.70.129/Lunch"
 	          username="root"
 	          password="mariadb"
 	/>
