@@ -9,6 +9,7 @@ import javax.persistence.*;
  * 
  */
 @Entity
+@Table(name ="Review")
 @NamedQuery(name="Review.findAll", query="SELECT r FROM Review r")
 public class Review implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -30,12 +31,12 @@ public class Review implements Serializable {
 
 	//bi-directional one-to-one association to Account
 	@OneToOne
-	@JoinColumn(name="email")
+	@JoinColumn(name="email", updatable=false, insertable=false)
 	private Account account;
 
 	//bi-directional many-to-one association to Lunch
 	@ManyToOne
-	@JoinColumn(name="lunch_name")
+	@JoinColumn(name="lunch_name", updatable=false, insertable=false)
 	private Lunch lunch;
 
 	public Review() {

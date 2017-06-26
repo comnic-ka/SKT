@@ -31,7 +31,7 @@ public class FrontControllerServlet extends HttpServlet {
 				
 		// リクエストURLから適切なActionオブジェクト(ビジネス・ロジックの実行をカプセル化するオブジェクト)を取得
 		Action action = ActionFactory.getAction(request.getServletPath());
-		System.out.println(action);
+		System.out.println(request.getParameter("email"));
 		
 		// Actionを実行して、転送先Viewのパスを取得
 		String forwardPath = action.execute(request, response);

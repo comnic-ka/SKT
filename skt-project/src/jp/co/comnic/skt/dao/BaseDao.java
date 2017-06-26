@@ -10,6 +10,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import jp.co.comnic.skt.entity.Account;
 import jp.co.comnic.skt.entity.Lunch;
 import jp.co.comnic.skt.entity.Review;
 
@@ -26,6 +27,9 @@ public class BaseDao {
 		return em.createQuery(query.select(root)).getResultList();
 	}
 	
+	public <T> T findById(Class<T> entityClass, Serializable id) {
+		return em.find(entityClass, id);
+	}
 
 
 	
@@ -62,6 +66,11 @@ public class BaseDao {
 		} catch (Exception e) {
 			throw new DaoException(e);
 		}
+	}
+
+	public Account findAll(Class<Account> class1, Integer id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

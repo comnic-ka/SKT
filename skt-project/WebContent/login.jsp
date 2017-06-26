@@ -44,7 +44,7 @@
             <b>pass:</b>
             </td>
           <td>
-          <input type ="password" name = "pass" size="20" placeholder="pass">
+          <input type ="password" name = "password" size="20" placeholder="pass">
           </td>
         </tr>
        </table>
