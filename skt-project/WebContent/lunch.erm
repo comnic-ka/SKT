@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diagram>
+	<dbsetting>
+		<dbsystem>MySQL</dbsystem>
+		<server>52.14.123.19</server>
+		<port>3306</port>
+		<database>lunch</database>
+		<user>root</user>
+		<password>mariadb</password>
+		<use_default_driver>true</use_default_driver>
+		<url>jdbc:mysql://52.14.123.19:3306/lunch</url>
+		<driver_class_name>com.mysql.jdbc.Driver</driver_class_name>
+	</dbsetting>
 	<page_setting>
 		<direction_horizontal>true</direction_horizontal>
 		<scale>100</scale>
@@ -11,7 +22,7 @@
 	</page_setting>
 	<category_index>0</category_index>
 	<zoom>1.0</zoom>
-	<x>7</x>
+	<x>0</x>
 	<y>0</y>
 	<default_color>
 		<r>128</r>
@@ -138,7 +149,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2017-06-23 10:33:31</creation_date>
-			<updated_date>2017-06-23 14:44:16</updated_date>
+			<updated_date>2017-06-26 09:30:35</updated_date>
 			<model_property>
 				<name>プロジェクト名</name>
 				<value></value>
@@ -617,7 +628,7 @@
 							<g>0</g>
 							<b>0</b>
 						</color>
-					<child_cardinality>1..n</child_cardinality>
+					<child_cardinality>0..n</child_cardinality>
 					<parent_cardinality>1</parent_cardinality>
 					<reference_for_pk>true</reference_for_pk>
 					<name></name>
