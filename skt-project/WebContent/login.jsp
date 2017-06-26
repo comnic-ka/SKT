@@ -29,7 +29,7 @@
           </div>
 
     <div align="center">
-      <form method="POST" action= "index2.jsp">
+      <form method="POST" action= "login.do">
         <table>
          <tr>
           <td>
@@ -51,6 +51,8 @@
        <br>
         <input type= "submit" value = "ログイン">
      </form>
+     
+     <p class="error">${error}</p>
      
       <br><br>
       <a href="signup.jsp">新規登録</a>
