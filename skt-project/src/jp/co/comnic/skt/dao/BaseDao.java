@@ -10,7 +10,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-
 import jp.co.comnic.skt.entity.Lunch;
 import jp.co.comnic.skt.entity.Review;
 
@@ -34,8 +33,14 @@ public class BaseDao {
 		return em.find(entityClass, review);
 	}
 	
-	public void insert(Object entity){
-		
+	public void insert(Object entity) throws DaoException{
+		try {
+			tx.begin();
+			em.persist(entity);
+			tx.commit();
+		} catch (Exception e) {
+			throw new DaoException(e);
+		}
 	}
 	
 	public void remove(Object entity) throws DaoException{
@@ -49,8 +54,14 @@ public class BaseDao {
 	
 	}
 	
-	public void update(Object entity){
-		
+	public void update(Object entity) throws DaoException{
+		try {
+			tx.begin();
+			em.merge(entity);
+			tx.commit();
+		} catch (Exception e) {
+			throw new DaoException(e);
+		}
 	}
 	
 }
