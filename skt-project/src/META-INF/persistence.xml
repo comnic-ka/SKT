@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="skt-project">
+	<provider></provider>
+		<non-jta-data-source>java:comp/env/ds/lunch</non-jta-data-source>
+		
+	
 		<class>jp.co.comnic.skt.entity.Account</class>
 		<class>jp.co.comnic.skt.entity.Lunch</class>
 		<class>jp.co.comnic.skt.entity.Review</class>
 		
 		
-		<properties>
-        
-            <property name="javax.persistence.jdbc.url"     
-                      value="jdbc:mysql://52.14.123.19/lunch" />
-            <property name="javax.persistence.jdbc.driver"
-                      value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.user"
-                      value="root" />
-            <property name="javax.persistence.jdbc.password"
-                      value="mariadb" />
-        
-        </properties>
+		
 		
 	</persistence-unit>
 </persistence>

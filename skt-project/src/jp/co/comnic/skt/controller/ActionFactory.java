@@ -4,7 +4,9 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebListener;
 
+@WebListener
 public class ActionFactory implements ServletContextListener{
 	
 	private static ServletContext context;
@@ -15,6 +17,7 @@ public class ActionFactory implements ServletContextListener{
 		
 		// 引数で渡されたServletパスに対応するActionの実装クラス名を取得
 		String actionClassName = context.getInitParameter(servletPath);
+		System.out.println(actionClassName);
 				
 		try {
 			// 取得したActionの実装クラス名からインスタンスを生成

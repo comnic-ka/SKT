@@ -29,7 +29,7 @@
           </div>
 
     <div align="center">
-      <form method="POST" action= "login.do">
+      <form method="post" action= "login.do">
         <table>
          <tr>
           <td>
