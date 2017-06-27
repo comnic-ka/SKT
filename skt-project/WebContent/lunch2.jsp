@@ -28,7 +28,20 @@
               </nav>
             </div>
           </div>
-
+          
+				<table>
+			<tr>
+				<th>名前</th>
+				<th>場所</th>
+			</tr>
+			<c:forEach var="Lunch" items="${Lunch}">
+				<tr>
+					<td>${Lunch.lunch_name}</td>
+					<td>${Lunch.location}</td>
+				</tr>
+			</c:forEach>
+		</table>
+			
           <input type= "search" size="30" placeholder="キーワードを検索してね">
           <a href="search-result2.jsp"><input type= "submit" value = "検索"></a>
 

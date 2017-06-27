@@ -37,18 +37,16 @@ public class AccountDao extends BaseDao {
 		Account account = null;
 		
 		try {
-			// Criteria APIを使用して以下SQLを生成する
-			// SELECT * FROM ACCOUNT WHERE email = [email] AND password = [password]
+		
 			query.select(root)
 				 .where(builder.equal(root.get("email"), email), 
 						builder.equal(root.get("password"), password));
 			
-			// SQLを実行して結果を単一のエンティティ・オブジェクトとして取得
+		
 			account = em.createQuery(query).getSingleResult();
 			
 		} catch (NoResultException e) {
-			// getSingleResultメソッドは結果がなかった場合にNoResultExceptionをthrow
-			// するため、この例外処理は不要
+			
 		}
 		
 		return account;

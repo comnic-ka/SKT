@@ -28,7 +28,8 @@
               </nav>
             </div>
           </div>
-
+			<jsp:param name="sql" value="SELECT * FROM Lunch WHERE name LIKE ?"/>
+			<jsp:param name="table" value="Lunch"/>
           <input type= "search" size="30" placeholder="キーワードを検索してね">
           <a href="search-result.jsp"><input type= "submit" value = "検索"></a>
 

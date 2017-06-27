@@ -5,11 +5,10 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Review database table.
+ * The persistent class for the REVIEW database table.
  * 
  */
 @Entity
-@Table(name ="Review")
 @NamedQuery(name="Review.findAll", query="SELECT r FROM Review r")
 public class Review implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -31,12 +30,12 @@ public class Review implements Serializable {
 
 	//bi-directional one-to-one association to Account
 	@OneToOne
-	@JoinColumn(name="email", updatable=false, insertable=false)
+	@JoinColumn(name="email")
 	private Account account;
 
 	//bi-directional many-to-one association to Lunch
 	@ManyToOne
-	@JoinColumn(name="lunch_name", updatable=false, insertable=false)
+	@JoinColumn(name="lunch_name")
 	private Lunch lunch;
 
 	public Review() {

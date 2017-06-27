@@ -6,11 +6,10 @@ import java.util.List;
 
 
 /**
- * The persistent class for the Lunch database table.
+ * The persistent class for the LUNCH database table.
  * 
  */
 @Entity
-@Table(name ="Lunch")
 @NamedQuery(name="Lunch.findAll", query="SELECT l FROM Lunch l")
 public class Lunch implements Serializable {
 	private static final long serialVersionUID = 1L;

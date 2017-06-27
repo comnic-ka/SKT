@@ -3,8 +3,6 @@
 	<persistence-unit name="skt-project">
 	<provider></provider>
 		<non-jta-data-source>java:comp/env/ds/Lunch</non-jta-data-source>
-		
-	
 		<class>jp.co.comnic.skt.entity.Account</class>
 		<class>jp.co.comnic.skt.entity.Lunch</class>
 		<class>jp.co.comnic.skt.entity.Review</class>

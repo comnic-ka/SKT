@@ -29,6 +29,7 @@
               </nav>
             </div>
           </div>
+        
 
           <div class="inner cover">
             <h2 class="cover-heading">そうだ、お昼ご飯を探そう！</h2>
