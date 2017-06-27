@@ -7,8 +7,6 @@
 	<sql:param value="%${param.name}%" />
 </sql:query>
 
-<h1>${param.table}</h1>
-	
 	<div class="list-table" align="center">
 		<table>
 			<tr>
