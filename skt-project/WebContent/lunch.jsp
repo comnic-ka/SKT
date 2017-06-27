@@ -19,20 +19,21 @@
                   <li><a href="index.jsp">ホーム</a></li>
                   <li><a href="login.jsp">ログイン</a></li>
                   <li class="active"><a href="lunch.jsp">お昼ご飯情報</a></li>
-                  
                 </ul>
                 
 			     <jsp:include page="log-header.jsp">
 				 <jsp:param  name="page" value="login"/>
 			 	 </jsp:include>
+			 	 
               </nav>
             </div>
             
-           	<div class="search-box">
+        <div class="search-box">
 		<form action="" method="post">
-			<input type="search" name="name"> <input type="submit" value="Search">
+			<input type="search" name="name" size=20 placeholder="キーワードを入力してね">
+			<input type="submit" value="検索">
 		</form>
-	</div>
+		</div>
  
           </div>
           
@@ -42,7 +43,9 @@
 			<jsp:param name="table" value="Lunch"/>
 			</jsp:include>
         </div>
-
+        
+			<br>
+			<a href="lunch.jsp">← 一覧へ戻る</a>
       </div>
 
     </div>

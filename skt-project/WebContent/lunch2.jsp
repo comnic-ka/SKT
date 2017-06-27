@@ -29,23 +29,23 @@
 			 	 </jsp:include>
               </nav>
             </div>
-          </div>
             
-              	<div class="search-box">
+        <div class="search-box">
 		<form action="" method="post">
-			<input type="search" name="name"> <input type="submit" value="Search">
+		<input type="search" name="name" size=20 placeholder="キーワードを入力してね">
+		<input type="submit" value="検索">
 		</form>
+		</div>
 	</div>
         
         	<jsp:include page="list_table.jsp">
 		    <jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
 			<jsp:param name="table" value="Lunch"/>
 			</jsp:include>
-		
-		<p class="error">${error}</p>
 
         </div>
-
+			<br>
+			<a href="lunch2.jsp">← 一覧へ戻る</a>
       </div>
 
     </div>
