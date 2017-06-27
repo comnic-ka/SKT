@@ -28,42 +28,19 @@
               </nav>
             </div>
             
-              <input type= "search" size="30" placeholder="キーワードを検索してね">
-   		      <a href="search-result.jsp"><input type= "submit" value = "検索"></a>
+           	<div class="search-box">
+		<form action="" method="post">
+			<input type="search" name="name"> <input type="submit" value="Search">
+		</form>
+	</div>
  
           </div>
           
           <br>
-          <div align="center">
-            <table>
-          	<tr>
-          	<th>名前</th>
-          	<th>場所</th>
-          	</tr>
- 
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				
-			</table>
-			 </div>
+            <jsp:include page="list_table.jsp">
+		    <jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
+			<jsp:param name="table" value="Lunch"/>
+			</jsp:include>
         </div>
 
       </div>

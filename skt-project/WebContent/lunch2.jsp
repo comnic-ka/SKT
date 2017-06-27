@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,54 +29,21 @@
 			 	 </jsp:include>
               </nav>
             </div>
-            
-          <input type= "search" size="30" placeholder="キーワードを検索してね">
-          <a href="search-result2.jsp"><input type= "submit" value = "検索"></a>
-          
           </div>
+            
+              	<div class="search-box">
+		<form action="" method="post">
+			<input type="search" name="name"> <input type="submit" value="Search">
+		</form>
+	</div>
         
-<!--           <table>
-          	<tr>名前</tr>
-          	<tr>場所</tr>
-          	<c:forEach var="Lunch" items="${Lunch}">
-				<tr>
-					<td>${Lunch.lunch_name}</td>
-					<td>${Lunch.location}</td>
-				</tr>
-				</c:forEach>
-          </table>
--->
-<br>
-          <div align="center">
-            <table>
-          	<tr>
-          	<th>名前</th>
-          	<th>場所</th>
-          	</tr>
- 
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				<tr>
-					<td>吉野家</td>
-					<td>右</td>
-				</tr>
-				
-			</table>
-			 </div>
+        	<jsp:include page="list_table.jsp">
+		    <jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
+			<jsp:param name="table" value="Lunch"/>
+			</jsp:include>
+		
+		<p class="error">${error}</p>
+
         </div>
 
       </div>
