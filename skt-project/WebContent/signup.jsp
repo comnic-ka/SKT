@@ -28,7 +28,7 @@
           </div>
 
     <div align="center">
-      <form method="POST" action= "success.jsp">
+      <form method="POST" action= "insert.do">
         <table>
          <tr>
           <td>
@@ -43,7 +43,7 @@
             <b>pass:</b>
             </td>
           <td>
-          <input type ="password" name = "pass" size="20" placeholder="pass">
+          <input type ="password" name = "password" size="20" placeholder="password">
           </td>
         </tr>
         <tr>

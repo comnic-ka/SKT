@@ -17,6 +17,12 @@
 		<param-value>jp.co.comnic.skt.controller.LogoutAction</param-value>
 	</context-param>
 	
+		
+	<context-param>
+		<param-name>/insert.do</param-name>
+		<param-value>jp.co.comnic.skt.controller.InsertAction</param-value>
+	</context-param>
+	
 	<!-- Settings for JSP pages -->	
 	<servlet>
 		<servlet-name>Login</servlet-name>
