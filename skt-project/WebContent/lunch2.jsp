@@ -27,24 +27,54 @@
 			 	 </jsp:include>
               </nav>
             </div>
-          </div>
+            
+          <input type= "search" size="30" placeholder="キーワードを検索してね">
+          <a href="search-result2.jsp"><input type= "submit" value = "検索"></a>
           
-				<table>
-			<tr>
-				<th>名前</th>
-				<th>場所</th>
-			</tr>
-			<c:forEach var="Lunch" items="${Lunch}">
+          </div>
+        
+<!--           <table>
+          	<tr>名前</tr>
+          	<tr>場所</tr>
+          	<c:forEach var="Lunch" items="${Lunch}">
 				<tr>
 					<td>${Lunch.lunch_name}</td>
 					<td>${Lunch.location}</td>
 				</tr>
-			</c:forEach>
-		</table>
-			
-          <input type= "search" size="30" placeholder="キーワードを検索してね">
-          <a href="search-result2.jsp"><input type= "submit" value = "検索"></a>
-
+				</c:forEach>
+          </table>
+-->
+<br>
+          <div align="center">
+            <table>
+          	<tr>
+          	<th>名前</th>
+          	<th>場所</th>
+          	</tr>
+ 
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				
+			</table>
+			 </div>
         </div>
 
       </div>
