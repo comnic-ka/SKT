@@ -28,7 +28,10 @@ public class FrontControllerServlet extends HttpServlet {
 	 * @throws IOException
 	 */
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				
+				// 日本語対応のプログラム
+		request.setCharacterEncoding("utf-8");
+		
+		
 		// リクエストURLから適切なActionオブジェクト(ビジネス・ロジックの実行をカプセル化するオブジェクト)を取得
 		Action action = ActionFactory.getAction(request.getServletPath());
 		System.out.println(request.getParameter("email"));
