@@ -1,5 +1,6 @@
 package jp.co.comnic.skt.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,6 +61,12 @@ public class ControllerUtils {
 	public static void populateEntity(HttpServletRequest request, Object entity) {
 
 		// リクエスト・パラメーターの集合をMapオブジェクトとして取得
+		try {
+			request.setCharacterEncoding("utf-8");
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		Map<String, String[]> parameterMap = request.getParameterMap();
 
 		// Map<String, String>に変換
