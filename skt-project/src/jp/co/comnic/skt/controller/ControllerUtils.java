@@ -36,9 +36,10 @@ public class ControllerUtils {
 	public static String getFullyQualifiedClassName(String servletPath) {
 		
 		String className = "";
-		
-		if("/")
+		System.out.println(servletPath);
+		if("/insert.do".equals(servletPath)){
 		className = "Account";
+		}
 		String packageName = "jp.co.comnic.skt.entity.";
 		
 		
