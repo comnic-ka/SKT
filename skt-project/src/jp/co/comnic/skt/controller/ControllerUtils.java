@@ -37,6 +37,7 @@ public class ControllerUtils {
 		
 		String className = "";
 		
+		if("/")
 		className = "Account";
 		String packageName = "jp.co.comnic.skt.entity.";
 		
