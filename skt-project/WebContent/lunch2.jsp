@@ -22,9 +22,9 @@
                   
                 </ul>
                 
- 	             <p>Login user: ${loginUsername}
-    	         <a href="${ctxPath}/logout.do"> － Logout</a>
-        	     </p>
+			     <jsp:include page="log-header.jsp">
+				 <jsp:param  name="page" value="login"/>
+			 	 </jsp:include>
               </nav>
             </div>
           </div>
