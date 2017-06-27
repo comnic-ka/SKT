@@ -27,6 +27,30 @@
               </nav>
             </div>
           </div>
+		<li>新規</li>
+			<div align="center">
+      <form method="POST" action= "insertBento.do">
+        <table>
+         <tr>
+          <td>
+            <b>店名:</b>
+          </td>
+          <td>
+            <input name = "lunchName" size="20" placeholder="lunchName">
+            </td>
+         </tr>
+         <tr>
+            <td>
+            <b>住所:</b>
+            </td>
+          <td>
+          <input type ="location" name = "location" size="20" placeholder="location">
+          </td>
+        </tr>
+       </table>
+       <br>
+        <input type= "submit" value = "登録">
+     </form>
 
           <li>更新</li>
           <li>削除</li>
