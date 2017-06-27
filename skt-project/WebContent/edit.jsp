@@ -41,6 +41,7 @@
           				<td><input name = "location" size="20" placeholder="location"></td>
         			</tr>
        			</table><br>
+       			
         		<input type= "submit" value = "登録">
      		</form>
 

@@ -14,6 +14,7 @@
 					<th>${columnName}</th>
 				</c:forEach>
 				
+				
 			</tr>	
 			<c:forEach var="record" items="${table.rowsByIndex}">
 				<tr>

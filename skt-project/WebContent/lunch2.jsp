@@ -42,6 +42,7 @@
 					<jsp:param name="table" value="Lunch"/>
 					</jsp:include>
       		</div>
+      		
       				<br>
 					<a href="lunch2.jsp">← 一覧へ戻る</a>
 					
