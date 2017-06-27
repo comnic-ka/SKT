@@ -21,9 +21,9 @@
                   <li><a href="lunch.jsp">お昼ご飯情報</a></li>
 
                 </ul>
-              <p>Login user: ${loginUsername}
-              <a href="${ctxPath}/logout.do"> － Logout</a>
-              </p>
+			     <jsp:include page="log-header.jsp">
+				 <jsp:param  name="page" value="login"/>
+			 	 </jsp:include>
               </nav>
             </div>
           </div>
