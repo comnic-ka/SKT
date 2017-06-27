@@ -16,6 +16,7 @@ public class LunchDao extends BaseDao {
 	private Root<Lunch> root = query.from(Lunch.class);
 	
 	public List<Lunch> findAll() {
+		
 		return super.findAll(query, root);
 	}
 	
