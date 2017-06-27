@@ -15,7 +15,7 @@
 				<c:forEach var="columnName" items="${table.columnNames}">
 					<th>${columnName}</th>
 				</c:forEach>
-				<th colspan="2">
+				
 			</tr>	
 			<c:forEach var="record" items="${table.rowsByIndex}">
 				<tr>
