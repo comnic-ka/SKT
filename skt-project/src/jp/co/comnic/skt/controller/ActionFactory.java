@@ -16,6 +16,7 @@ public class ActionFactory implements ServletContextListener{
 		Action action = null;
 		
 		
+		
 		// 引数で渡されたServletパスに対応するActionの実装クラス名を取得
 		String actionClassName = context.getInitParameter(servletPath);
 		System.out.println(actionClassName);
