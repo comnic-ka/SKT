@@ -74,6 +74,9 @@ public class ControllerUtils {
 		for (String key : parameterMap.keySet()) {
 			propertyMap.put(key, parameterMap.get(key)[0]);
 		}
+		if(propertyMap.equals(null)){
+			
+		}else{
 
 		try {
 
@@ -84,6 +87,7 @@ public class ControllerUtils {
 		} catch (IllegalAccessException | InvocationTargetException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
 		}
 	}
 
