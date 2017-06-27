@@ -27,11 +27,43 @@
 			 	 </jsp:include>
               </nav>
             </div>
+            
+              <input type= "search" size="30" placeholder="キーワードを検索してね">
+   		      <a href="search-result.jsp"><input type= "submit" value = "検索"></a>
+ 
           </div>
-			
-          <input type= "search" size="30" placeholder="キーワードを検索してね">
-          <a href="search-result.jsp"><input type= "submit" value = "検索"></a>
-
+          
+          <br>
+          <div align="center">
+            <table>
+          	<tr>
+          	<th>名前</th>
+          	<th>場所</th>
+          	</tr>
+ 
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				<tr>
+					<td>吉野家</td>
+					<td>右</td>
+				</tr>
+				
+			</table>
+			 </div>
         </div>
 
       </div>
@@ -39,8 +71,7 @@
     </div>
 
     <jsp:include page="page-footer.jsp"></jsp:include>
-    
-    
+
     <jsp:include page="html-footer.jsp"></jsp:include>
   </body>
 </html>

@@ -32,7 +32,7 @@
       <form method="post" action= "login.do">
         <table>
          <tr>
-          <td>
+          <td bgcolor="#778899">
             <b>email:</b>
           </td>
           <td>
@@ -40,7 +40,7 @@
             </td>
          </tr>
          <tr>
-            <td>
+            <td bgcolor="#778899">
             <b>pass:</b>
             </td>
           <td>
