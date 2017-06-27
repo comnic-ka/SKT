@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
  * @version 1.0
  *
  */
-@WebFilter("/*") // アプリケーションに対するすべてのリクエストに対してこのFilterを適用
+@WebFilter(urlPatterns = {"/index2.jsp" , "/lunch2.jsp","/search2.jsp","/today-lunch2.jsp","/edit.jsp"})// アプリケーションに対するすべてのリクエストに対してこのFilterを適用
 public class AuthenticateFilter implements Filter {
 
 	@Override
