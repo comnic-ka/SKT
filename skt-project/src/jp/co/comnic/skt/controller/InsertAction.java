@@ -49,6 +49,7 @@ public class InsertAction implements Action {
 		}
 		try {
 
+			
 			// Object entity = Account.newInstance();
 
 			Object entity = Class.forName(ControllerUtils.getFullyQualifiedClassName(servletPath)).newInstance();
