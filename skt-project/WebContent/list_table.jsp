@@ -9,7 +9,7 @@
 
 <h1>${param.table}</h1>
 	
-	<div class="list-table">
+	<div class="list-table" align="center">
 		<table>
 			<tr>
 				<c:forEach var="columnName" items="${table.columnNames}">

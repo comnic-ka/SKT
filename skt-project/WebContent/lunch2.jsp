@@ -34,10 +34,10 @@
          <input type= "search" size="30" placeholder="キーワードを検索してね">
          <a href="search-result2.jsp"><input type= "submit" value = "検索"></a> 
          
-        <jsp:include page="list_table.jsp">
+        	<jsp:include page="list_table.jsp">
 		    <jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
 			<jsp:param name="table" value="Lunch"/>
-		</jsp:include>
+			</jsp:include>
 		
 		<p class="error">${error}</p>
 
