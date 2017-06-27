@@ -28,8 +28,11 @@
               </nav>
             </div>
             
-              <input type= "search" size="30" placeholder="キーワードを検索してね">
-   		      <a href="search-result.jsp"><input type= "submit" value = "検索"></a>
+           	<div class="search-box">
+		<form action="" method="post">
+			<input type="search" name="name"> <input type="submit" value="Search">
+		</form>
+	</div>
  
           </div>
           
