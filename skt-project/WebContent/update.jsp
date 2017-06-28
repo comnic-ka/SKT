@@ -37,6 +37,7 @@
 			</sql:query>
 		</c:if>
 		
+		
 		<c:set var="review" value="${rs.rows[0]}"/>
 		
 		<div align="center">
