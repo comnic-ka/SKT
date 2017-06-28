@@ -34,20 +34,21 @@
       		<form method="POST" action= "insertBento.do">
         		<table>
          			<tr>
-          				<td bgcolor="#778899">店名</td>
+          				<td bgcolor="#fd5b78">店名</td>
           				<td><input name = "lunchName" size="20" placeholder="lunchName"></td>
          			</tr>
          			<tr>
-            			<td bgcolor="#778899">住所</td>
+            			<td bgcolor="#fd5b78">住所</td>
           				<td><input name = "location" size="20" placeholder="location"></td>
         			</tr>
        			</table><br>
        			
         		<input type= "submit" value = "登録">
      		</form>
-     		<p class="error">${error}</p>
-     		<br>
+     		<p class="error">${error}</p><br>
      		</div>
+          
+          <br><a href="edit.jsp">← 編集ページへ戻る</a>
           
           </div>
 

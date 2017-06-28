@@ -29,10 +29,12 @@
           </div>
 
     <div align="center">
-      <form method="post" action= "login.do">
+    	<div class="form-border">
+    	<br>
+      	<form method="post" action= "login.do">
         <table>
          <tr>
-          <td bgcolor="#778899">
+          <td bgcolor="#fd5b78">
             <b>email:</b>
           </td>
           <td>
@@ -40,7 +42,7 @@
             </td>
          </tr>
          <tr>
-            <td bgcolor="#778899">
+            <td bgcolor="#fd5b78">
             <b>pass:</b>
             </td>
           <td>
@@ -50,12 +52,19 @@
        </table>
        <br>
         <input type= "submit" value = "ログイン">
+        
      </form>
+     <br>
+     </div>
      
      <p class="error">${error}</p>
      
-      <br><br>
-      <a href="signup.jsp">新規登録</a>
+      <br>
+      <div class="inner cover">
+            <p class="lead">
+              <a href="signup.jsp" class="btn btn-lg btn-default">新規登録</a>
+            </p>
+            </div>
      </div>
           </div>
 

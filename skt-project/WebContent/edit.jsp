@@ -12,7 +12,7 @@
 	<div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div class="masthead clearfix">
+ 
             <div class="inner">
               <h1 class="masthead-brand">お昼ご飯評価システム(仮)</h1>
               <nav>
@@ -21,26 +21,31 @@
                   <li><a href="lunch2.jsp">お昼ご飯情報</a></li>
                   <li class="active"><a href="edit.jsp">情報編集</a></li>
                 </ul>
+                
 			     <jsp:include page="log-header.jsp">
 				 <jsp:param  name="page" value="login"/>
 			 	 </jsp:include>
               </nav>
+              
+               	<div class="search-box">
+				<form action="" method="post">
+				<input type="search" name="name" size=20 placeholder="キーワードを入力してね">
+				<input type="submit" value="検索">
+				</form>
+				</div><br>
             </div>
-          </div>
-          
-          
-          <h3>更新</h3>
-          <h3>削除</h3>
-          
-          <h3><a href="new.jsp">新規</a></h3>
-          
-          </div>
-
-        </div>
-
-      </div>
-
-    <jsp:include page="page-footer.jsp"></jsp:include>
-    <jsp:include page="html-footer.jsp"></jsp:include>
+            
+            	<jsp:include page="list_table2.jsp">
+		   		<jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
+				<jsp:param name="table" value="Lunch"/>
+				</jsp:include><br>
+				
+		</div>		
+			<div class="inner">
+			<p>Copyright © <a href="http://www.comnic.co.jp/">comnic</a>-javalesson 2017</p>
+			</div>
+		</div>
+	</div>
+		 <jsp:include page="html-footer.jsp"></jsp:include>
   </body>
 </html>

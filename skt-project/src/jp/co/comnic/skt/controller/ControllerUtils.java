@@ -44,6 +44,8 @@ public class ControllerUtils {
 			className = "Account";
 		} else if ("/insertBento.do".equals(servletPath)) {
 			className = "Lunch";
+		}else if ("/review.do".equals(servletPath)) {
+			className = "Review";
 		}
 		String packageName = "jp.co.comnic.skt.entity.";
 
