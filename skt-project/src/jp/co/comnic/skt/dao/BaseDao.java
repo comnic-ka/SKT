@@ -36,8 +36,8 @@ public class BaseDao {
 	
 	
 	
-	public Review findKeyword(Class<Review> entityClass, String review){
-		return em.find(entityClass, review);
+	public Review findKeyword(Class<Review> entityClass, Object entity){
+		return em.find(entityClass, entity);
 	}
 	
 	public void insert(Object entity) throws DaoException{

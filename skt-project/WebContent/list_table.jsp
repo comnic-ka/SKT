@@ -22,7 +22,7 @@
 						<c:if test="${loop.count == 1}">
 							<c:set var="id" value="${data}" />
 						</c:if>
-						<td>${data}</td>
+						<td><a href="review.do?id=${id}">${data}</a></td>
 					</c:forEach>
 				</tr>
 			</c:forEach>

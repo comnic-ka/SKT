@@ -38,6 +38,11 @@
 		<param-value>jp.co.comnic.skt.controller.RemoveAction</param-value>
 	</context-param>
 	
+	<context-param>
+		<param-name>/review.do</param-name>
+		<param-value>jp.co.comnic.skt.controller.ReviewAction</param-value>
+	</context-param>
+	
 	<!-- Settings for JSP pages -->	
 	<servlet>
 		<servlet-name>Login</servlet-name>

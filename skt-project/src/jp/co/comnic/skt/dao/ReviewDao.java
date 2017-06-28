@@ -18,8 +18,8 @@ public class ReviewDao extends BaseDao {
 		return super.findAll(query, root);
 	}
 	
-	public Review findByReview(String review) {
-		return super.findKeyword(Review.class, review);
+	public Review findByReview(Object entity) {
+		return super.findKeyword(Review.class, entity);
 	}
 	
 }
