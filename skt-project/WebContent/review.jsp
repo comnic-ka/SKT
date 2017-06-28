@@ -28,14 +28,22 @@
 				
 				<c:if test="${!empty param.id && empty error}">
 				<sql:query var="rs" dataSource="ds/lunch">
-					SELECT * FROM LUNCH WHERE lunch_name LIKE "${param.id}"
+					SELECT * FROM REVIEW r JOIN LUNCH l WHERE r.lunch_name LIKE "${param.id}"
 				</sql:query>
+				<sql:query var="avg" dataSource="ds/lunch">
+					SELECT * FROM REVIEW r JOIN LUNCH l WHERE r.lunch_name LIKE "${param.id}"
+				</sql:query>
+				<sql:query var="avg1" dataSource="ds/lunch">
+					SELECT AVG(price) FROM REVIEW WHERE lunch_name LIKE "${param.id}"
+				</sql:query>
+	
 				</c:if>
 				
 				<div align="center">
 				
 				<c:set var="lunch" value="${rs.rows[0]}"/>
-
+                <c:set var="review" value="${avg.rows[0]}"/>
+                <c:set var="review1" value="${avg1.rows[0]}"/>
 				<h1>${param.title}</h1>
 		
 				<form action="${param.action}" method="post">
@@ -47,6 +55,26 @@
 						<tr>
 							<th><label for="location">Location</label></th>
 							<td>${lunch.location}</td>
+						</tr>
+						<tr>
+							<th><label for="taste">Taste</label></th>
+							<td>${review.taste}</td>
+						</tr>
+						<tr>
+							<th><label for="price">Price</label></th>
+							<td>${review1.price}</td>
+						</tr>
+						<tr>
+							<th><label for="volume">Volume</label></th>
+							<td>${review.volume}</td>
+						</tr>
+						<tr>
+							<th><label for="distances">Distances</label></th>
+							<td>${review.distances}</td>
+						</tr>
+						<tr>
+							<th><label for="variety">Variety</label></th>
+							<td>${review.variety}</td>
 						</tr>
 					</table>
 				</form>
@@ -67,9 +95,11 @@
 						</style>
          			<script>
        					var ctx = document.getElementById("myChart").getContext('2d');
-
+                        
+       					Chart.defaults.global.defaultFontColor = 'silver';
         				new Chart(ctx, {
     							type: 'radar',
+    						
     						data: {
         							labels: ["Taste", "Price", "Volume", "Distance", "Variety"],
         							datasets: [{
@@ -77,13 +107,24 @@
               										borderWidth: 1,
              										backgroundColor: "rgba(153, 255, 51, 0.4)",
               										borderColor:     "rgba(153, 255, 51, 1)",
-              										data:[1,2,3,4,5]
+              										data:[${review.taste}, ${review1.price}, ${review.volume}, ${review.distances}, ${review.variety}]
               											
         							}]
         
     						},
+    						options:{
+    							scale:{
+    								ticks:{
+    									beginAtZero:true,
+    						            max:5,
+    						            min:0
+    								}
+    							}
+    						}
     
 						});
+ 
+
        
         		</script>
         	</div>
