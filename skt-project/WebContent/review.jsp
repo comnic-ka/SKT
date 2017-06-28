@@ -3,12 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 
-<c:if test="${!empty param.id && empty error}">
-	<sql:query var="rs" dataSource="ds/lunch">
-		SELECT * FROM REVIEW WHERE lunch_name LIKE "${param.id}"
-	</sql:query>
-</c:if>
-
 <!DOCTYPE html>
 <html lang="en">
 	 <jsp:include page="html-header.jsp">
@@ -32,21 +26,27 @@
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 				
+				<c:if test="${!empty param.id && empty error}">
+				<sql:query var="rs" dataSource="ds/lunch">
+					SELECT * FROM LUNCH WHERE lunch_name LIKE "${param.id}"
+				</sql:query>
+				</c:if>
+				
 				<div align="center">
 				
-				<c:set var="review" value="${rs.rows[0]}"/>
+				<c:set var="lunch" value="${rs.rows[0]}"/>
 
 				<h1>${param.title}</h1>
 		
 				<form action="${param.action}" method="post">
-					<table class="entry-form">
+					<table>
 						<tr>
 							<th><label for="Name">Name</label></th>
-							<td><input name="name" value="${param.id}" required></td>
+							<td>${param.id}</td>
 						</tr>
 						<tr>
-							<th><label for="taste">Taste </label></th>
-							<td><input name="taste" value="${review.taste}" required></td>
+							<th><label for="location">Location</label></th>
+							<td>${lunch.location}</td>
 						</tr>
 					</table>
 				</form>
@@ -71,13 +71,14 @@
         				new Chart(ctx, {
     							type: 'radar',
     						data: {
-        							labels: ["M", "T", "W", "T", "F"],
+        							labels: ["Taste", "Price", "Volume", "Distance", "Variety"],
         							datasets: [{
-              										label: 'apples',
+              										label: 'lunch',
               										borderWidth: 1,
              										backgroundColor: "rgba(153, 255, 51, 0.4)",
               										borderColor:     "rgba(153, 255, 51, 1)",
-              										data: [5,3,1,4,2]
+              										data:[1,2,3,4,5]
+              											
         							}]
         
     						},

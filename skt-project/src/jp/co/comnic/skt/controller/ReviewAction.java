@@ -18,6 +18,8 @@ public class ReviewAction implements Action{
 		String servletPath = request.getServletPath();
 		String id = request.getParameter("id");
 		
+		System.out.println(id);
+		
 //		String redirectPath = "review.jsp";
 		String forwardPath = "review.jsp"; 
 		
