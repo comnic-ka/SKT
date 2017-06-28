@@ -21,7 +21,7 @@ ${param.name}
 				<tr>
 					<c:forEach var="data" items="${record}" varStatus="loop">
 						<c:if test="${loop.count == 1}">
-							<c:set var="lunchName" value="${data}" />
+							<c:set var="id" value="${data}" />
 						</c:if>
 						<td><a href="review.do?id=${id}">${data}</a></td>
 					</c:forEach>
