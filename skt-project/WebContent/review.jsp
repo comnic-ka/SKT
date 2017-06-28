@@ -115,13 +115,12 @@
     							type: 'radar',
     						
     						data: {
-        							labels: ["Taste", "Price", "Volume", "Distance", "Variety"],
+        							labels: ["味", "価格", "量", "距離", "種類"],
         							datasets: [{
               										label: 'lunch',
               										borderWidth: 1,
              										backgroundColor: "rgba(153, 255, 51, 0.4)",
               										borderColor:     "rgba(153, 255, 51, 1)",
-              										
               											
               										data:[${review1.avg1}, ${review2.avg2}, ${review3.avg3}, ${review4.avg4}, ${review5.avg5}]
               											
@@ -136,6 +135,7 @@
     			
     								ticks:{
     									beginAtZero:true,
+    									 stepSize: 1,
     						            max:5,
     						            min:0
     								}

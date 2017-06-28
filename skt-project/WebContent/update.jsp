@@ -31,9 +31,9 @@
               </nav>
              
 <!-- ------------------------------------------------------------------------- -->
-		<c:if test="${!empty param.id}">
+		<c:if test="${!empty param.id && empty error}">
 			<sql:query var="rs" dataSource="ds/lunch">
-				SELECT * FROM REVIEW WHERE lunch_name like "${param.id}"
+				SELECT * FROM REVIEW WHERE lunch_name LIKE "${param.id}"
 			</sql:query>
 		</c:if>
 		
@@ -46,18 +46,8 @@
 				<form action="${param.action}" method="post">
 					<table>
 						<tr>
-							<th><label for="id">ID </label></th>
-							<c:if test="${!empty param.id && empty error}">
-								<c:set var="lunch_name" value="${param.id}"/>
-								<c:set var="readonly" value="readonly" />
-							</c:if>
-							<td><input type="number" name="id" value="${id}" ${readonly} required autofocus></td>
-						</tr>
-						<tr>
 							<th><label for="name">Lunch Name </label></th>
-							<c:set var="lunch_name" value="${param.id}"/>
-							<td><input name="name" value="${param.id}" required></td>
-							
+							<td><input name="name" value="${review.lunch_name}" required></td>
 						</tr>
 						<tr>
 							<th><label for="name">Location </label></th>

@@ -1,5 +1,6 @@
 package jp.co.comnic.skt.controller;
 
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -29,8 +30,7 @@ public class UpdateAction implements Action {
 		String forwardPath = null;
 		
 		String servletPath = request.getServletPath();
-		redirectPath = "update.jsp"; // 正常処理のリダイレクト先（一覧画面）
-		forwardPath = "edit.jsp"; // 例外発生時のフォワード先（元の登録画面）
+		forwardPath = "update.jsp"; // 例外発生時のフォワード先（元の登録画面）
 		String lunchName = (request.getParameter("id")); // 削除するレコードのID
 		System.out.println(lunchName);
 		
@@ -46,9 +46,6 @@ public class UpdateAction implements Action {
 			ControllerUtils.populateEntity(request, entity);
 			
 			new BaseDao().update(entity);
-			
-			forwardPath = null;
-			response.sendRedirect(redirectPath); 
 			
 		} catch (DaoException e) {
 			request.setAttribute("error", "[ERROR]: " + 
