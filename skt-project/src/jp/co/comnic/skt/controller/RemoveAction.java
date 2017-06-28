@@ -19,17 +19,20 @@ public class RemoveAction implements Action {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		String redirectPath = null;
+		String forwardPath = null;
+		
 		String servletPath = request.getServletPath();
-		String forwardPath = "./";
-		String redirectPath = "./";
-		Integer id = Integer.parseInt(request.getParameter("id")); // 削除するレコードのID
+		redirectPath = "lunch2.jsp"; // 正常処理のリダイレクト先（一覧画面）
+		forwardPath = "edit.jsp"; // 例外発生時のフォワード先（元の登録画面）
+		String lunchName = (request.getParameter("lunchName")); // 削除するレコードのID
 		
 		try {
 			
 			// リクエストされたサーブレット・パスから完全修飾クラス名を取得
 			String entityClass = ControllerUtils.getFullyQualifiedClassName(servletPath);
 			// DAOを使用してエンティティ・オブジェクトを削除
-			new BaseDao().remove(Class.forName(entityClass));
+			new BaseDao().remove(Class.forName(entityClass),lunchName);
 			
 			forwardPath = null;
 			response.sendRedirect(redirectPath);

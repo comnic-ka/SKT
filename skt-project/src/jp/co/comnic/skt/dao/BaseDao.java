@@ -10,6 +10,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+
 import jp.co.comnic.skt.entity.Account;
 import jp.co.comnic.skt.entity.Lunch;
 import jp.co.comnic.skt.entity.Review;
@@ -31,7 +32,9 @@ public class BaseDao {
 		return em.find(entityClass, id);
 	}
 
-
+	
+	
+	
 	
 	public Review findKeyword(Class<Review> entityClass, String review){
 		return em.find(entityClass, review);
@@ -57,6 +60,12 @@ public class BaseDao {
 		}
 	
 	}
+	
+	public <T> void remove(Class<T> entityClass, Serializable lunchName) throws DaoException {
+		// エンティティ・オブジェクトを取得して削除
+		remove(em.find(entityClass, lunchName));
+	}
+	
 	
 	public void update(Object entity) throws DaoException{
 		try {
