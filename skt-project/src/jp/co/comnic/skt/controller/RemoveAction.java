@@ -25,7 +25,8 @@ public class RemoveAction implements Action {
 		String servletPath = request.getServletPath();
 		redirectPath = "lunch2.jsp"; // 正常処理のリダイレクト先（一覧画面）
 		forwardPath = "edit.jsp"; // 例外発生時のフォワード先（元の登録画面）
-		String lunchName = (request.getParameter("lunchName")); // 削除するレコードのID
+		String lunchName = (request.getParameter("id")); // 削除するレコードのID
+		System.out.println(lunchName);
 		
 		try {
 			
