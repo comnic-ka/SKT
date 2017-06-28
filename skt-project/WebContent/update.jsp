@@ -31,11 +31,19 @@
               </nav>
              
 <!-- ------------------------------------------------------------------------- -->
+		<c:if test="${!empty param.id}">
+			<sql:query var="rs" dataSource="ds/lunch">
+				SELECT * FROM REVIEW WHERE id = ${param.id}
+			</sql:query>
+		</c:if>
+		
+		<c:set var="review" value="${rs.rows[0]}"/>
+		
 		<div align="center">
 			<div class="form-border1">
 				<h3>更新</h3>
 				<form action="${param.action}" method="post">
-					<table class="entry-form">
+					<table>
 						<tr>
 							<th><label for="id">ID </label></th>
 							<c:if test="${!empty param.id && empty error}">
@@ -46,7 +54,7 @@
 						</tr>
 						<tr>
 							<th><label for="name">Lunch Name </label></th>
-							<td><input name="name" value="${lunch.lunch_name}" required></td>
+							<td><input name="name" value="${review.lunch_name}" required></td>
 						</tr>
 						<tr>
 							<th><label for="name">Location </label></th>
