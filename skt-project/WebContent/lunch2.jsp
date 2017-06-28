@@ -37,7 +37,7 @@
 				
             </div>
 		
-            		<jsp:include page="list_table.jsp">
+            		<jsp:include page="list_table2.jsp">
 		    		<jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
 					<jsp:param name="table" value="Lunch"/>
 					</jsp:include>

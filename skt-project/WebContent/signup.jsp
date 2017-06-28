@@ -49,7 +49,7 @@
           </td>
         </tr>
         <tr>
-            <td bgcolor="#778899">
+            <td bgcolor="#fd5b78">
             <b>username:</b>
             </td>
           <td>

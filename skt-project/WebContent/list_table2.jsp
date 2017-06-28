@@ -28,10 +28,9 @@
 						<c:if test="${loop.count == 1}">
 							<c:set var="id" value="${data}" />
 						</c:if>
-						<td>${data}</td>
+						<td><a href="review.do?id=${id}">${data}</a></td>
 					</c:forEach>
-					
-					<td><a href="review.do?id=${id}">${data}</a></td>
+				
 					<td><a class="lead" href="edit?id=${id}">更新</a></td>
 					<td><a class="lead" href="remove.do?id=${id}">削除</a></td>
 				</tr>
