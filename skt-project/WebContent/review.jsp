@@ -68,6 +68,7 @@
 							<th><label for="volume">Volume</label></th>
 							<td>${review.volume}</td>
 						</tr>
+						
 						<tr>
 							<th><label for="distances">Distances</label></th>
 							<td>${review.distances}</td>
