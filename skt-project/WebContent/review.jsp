@@ -22,13 +22,7 @@
         <div class="cover-container">
 
               <h1 class="masthead-brand">お昼ご飯評価システム(仮)</h1>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a href="index.jsp">ホーム</a></li>
-                  <li><a href="login.jsp">ログイン</a></li>
-                  <li class="active"><a href="lunch.jsp">お昼ご飯情報</a></li>
-                </ul>
-                
+              <nav>              
 			     <jsp:include page="log-header.jsp">
 				 <jsp:param  name="page" value="login"/>
 			 	 </jsp:include>
@@ -95,12 +89,12 @@
 <!-- ------------------------------------------------------------------------------------------------- -->
 
         		
-        			<br>
-					<a href="lunch.jsp">← 一覧へ戻る</a>
-					<br>		
-        		
-        			
+       				<br><br><br><br><br><br><br><br><br><br><br>
+					<a href="javascript:history.back()">←　一覧ページへ戻る</a>
+					<br>
+					<div class="inner">
 					<p>Copyright © <a href="http://www.comnic.co.jp/">comnic</a>-javalesson 2017</p>
+					</div>
 					
 					</div>
 					</div>
@@ -108,7 +102,7 @@
 
 
         		
-        		    <jsp:include page="html-footer.jsp"></jsp:include>
+      <jsp:include page="html-footer.jsp"></jsp:include>
         		    
   </body>
 </html>

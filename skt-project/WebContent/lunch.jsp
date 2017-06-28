@@ -44,7 +44,7 @@
       		</div>
       		
       				<br>
-					<a href="lunch2.jsp">← 一覧へ戻る</a>
+					<a href="lunch.jsp">← 一覧へ戻る</a>
 					<br>
 					<div class="inner">
 					<p>Copyright © <a href="http://www.comnic.co.jp/">comnic</a>-javalesson 2017</p>

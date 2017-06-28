@@ -20,6 +20,7 @@
 				<c:forEach var="columnName" items="${table.columnNames}">
 					<th>${columnName}</th>
 				</c:forEach>
+				<th colspan="2">
 			</tr>	
 			<c:forEach var="record" items="${table.rowsByIndex}">
 				<tr>
@@ -27,8 +28,11 @@
 						<c:if test="${loop.count == 1}">
 							<c:set var="id" value="${data}" />
 						</c:if>
-						<td><a href="review.do?id=${id}">${data}</a></td>
+						<td>${data}</td>
 					</c:forEach>
+					
+					<td><a class="lead" href="edit?id=${id}">更新</a></td>
+					<td><a class="lead" href="remove.do?id=${id}">削除</a></td>
 				</tr>
 			</c:forEach>
 		</table>
