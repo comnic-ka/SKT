@@ -18,7 +18,6 @@
 	<div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div class="masthead clearfix">
             <div class="inner">
               <h1 class="masthead-brand">お昼ご飯評価システム(仮)</h1>
               <nav>
@@ -41,7 +40,6 @@
 
       </div>
 
-    </div>
     
     <jsp:include page="page-footer.jsp"></jsp:include>
     
