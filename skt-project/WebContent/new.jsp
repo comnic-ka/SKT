@@ -28,17 +28,34 @@
             </div>
           </div>
           
-          
-          <h3>更新</h3>
-          <h3>削除</h3>
-          
-          <h3><a href="new.jsp">新規</a></h3>
+          <div align="center">
+        <div class="form-border">
+		<h3>新規</h3>
+      		<form method="POST" action= "insertBento.do">
+        		<table>
+         			<tr>
+          				<td bgcolor="#778899">店名</td>
+          				<td><input name = "lunchName" size="20" placeholder="lunchName"></td>
+         			</tr>
+         			<tr>
+            			<td bgcolor="#778899">住所</td>
+          				<td><input name = "location" size="20" placeholder="location"></td>
+        			</tr>
+       			</table><br>
+       			
+        		<input type= "submit" value = "登録">
+     		</form>
+     		<p class="error">${error}</p>
+     		<br>
+     		</div>
           
           </div>
 
         </div>
 
       </div>
+
+    </div>
 
     <jsp:include page="page-footer.jsp"></jsp:include>
     <jsp:include page="html-footer.jsp"></jsp:include>
