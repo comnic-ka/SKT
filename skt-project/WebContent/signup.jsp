@@ -27,11 +27,13 @@
             </div>
           </div>
 
-    <div align="center">
+      <div align="center">
+      <div class="form-border1">
       <form method="POST" action= "insert.do">
+      <h3>新規登録</h3>
         <table>
          <tr>
-          <td>
+          <td bgcolor="#fd5b78">
             <b>email:</b>
           </td>
           <td>
@@ -39,7 +41,7 @@
             </td>
          </tr>
          <tr>
-            <td>
+            <td bgcolor="#fd5b78">
             <b>pass:</b>
             </td>
           <td>
@@ -47,7 +49,7 @@
           </td>
         </tr>
         <tr>
-            <td>
+            <td bgcolor="#778899">
             <b>username:</b>
             </td>
           <td>
@@ -56,17 +58,20 @@
         </tr>
        </table>
        <br>
+       
         <input type= "submit" value = "登録">
      </form>
+     <br>
      </div>
-        </div>
-
-      </div>
-
-    </div>
-    
+     
+            <p class="lead">
+              <a href="login.jsp">←ログインページへ</a>
+            </p>
+            </div>
+            </div>
+            </div>
+            </div>
     <jsp:include page="page-footer.jsp"></jsp:include>
 		<jsp:include page="html-footer.jsp"></jsp:include>
   </body>
-</html>
 </html>
