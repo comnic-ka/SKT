@@ -31,7 +31,7 @@
 						<td>${data}</td>
 					</c:forEach>
 					
-					<td><a class="lead" href="edit?id=${id}">更新</a></td>
+					<td><a class="lead" href="edit.do?id=${id}">更新</a></td>
 					<td><a class="lead" href="RemoveBento.do?id=${id}">削除</a></td>
 				</tr>
 			</c:forEach>
