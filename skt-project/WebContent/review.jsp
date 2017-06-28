@@ -30,11 +30,20 @@
 				<sql:query var="rs" dataSource="ds/lunch">
 					SELECT * FROM REVIEW r JOIN LUNCH l WHERE r.lunch_name LIKE "${param.id}"
 				</sql:query>
-				<sql:query var="avg" dataSource="ds/lunch">
-					SELECT * FROM REVIEW r JOIN LUNCH l WHERE r.lunch_name LIKE "${param.id}"
-				</sql:query>
 				<sql:query var="avg1" dataSource="ds/lunch">
-					SELECT AVG(price) FROM REVIEW WHERE lunch_name LIKE "${param.id}"
+					SELECT AVG(taste) avg1 FROM REVIEW WHERE lunch_name LIKE "${param.id}"
+				</sql:query>
+				<sql:query var="avg2" dataSource="ds/lunch">
+					SELECT AVG(price) avg2 FROM REVIEW WHERE lunch_name LIKE "${param.id}"
+				</sql:query>
+				<sql:query var="avg3" dataSource="ds/lunch">
+					SELECT AVG(volume) avg3 FROM REVIEW WHERE lunch_name LIKE "${param.id}"
+				</sql:query>
+				<sql:query var="avg4" dataSource="ds/lunch">
+					SELECT AVG(distances) avg4 FROM REVIEW WHERE lunch_name LIKE "${param.id}"
+				</sql:query>
+				<sql:query var="avg5" dataSource="ds/lunch">
+					SELECT AVG(variety) avg5 FROM REVIEW WHERE lunch_name LIKE "${param.id}"
 				</sql:query>
 	
 				</c:if>
@@ -42,8 +51,12 @@
 				<div align="center">
 				
 				<c:set var="lunch" value="${rs.rows[0]}"/>
-                <c:set var="review" value="${avg.rows[0]}"/>
                 <c:set var="review1" value="${avg1.rows[0]}"/>
+                <c:set var="review2" value="${avg2.rows[0]}"/>
+                <c:set var="review3" value="${avg3.rows[0]}"/>
+                <c:set var="review4" value="${avg4.rows[0]}"/>
+                <c:set var="review5" value="${avg5.rows[0]}"/>
+                
 				<h1>${param.title}</h1>
 		
 				<form action="${param.action}" method="post">
@@ -58,24 +71,24 @@
 						</tr>
 						<tr>
 							<th><label for="taste">Taste</label></th>
-							<td>${review.taste}</td>
+							<td>${review1.avg1}</td>
 						</tr>
 						<tr>
 							<th><label for="price">Price</label></th>
-							<td>${review1.price}</td>
+							<td>${review2.avg2}</td>
 						</tr>
 						<tr>
 							<th><label for="volume">Volume</label></th>
-							<td>${review.volume}</td>
+							<td>${review3.avg3}</td>
 						</tr>
 						
 						<tr>
 							<th><label for="distances">Distances</label></th>
-							<td>${review.distances}</td>
+							<td>${review4.avg4}</td>
 						</tr>
 						<tr>
 							<th><label for="variety">Variety</label></th>
-							<td>${review.variety}</td>
+							<td>${review5.avg5}</td>
 						</tr>
 					</table>
 				</form>
@@ -108,7 +121,7 @@
               										borderWidth: 1,
              										backgroundColor: "rgba(153, 255, 51, 0.4)",
               										borderColor:     "rgba(153, 255, 51, 1)",
-              										data:[${review.taste}, ${review1.price}, ${review.volume}, ${review.distances}, ${review.variety}]
+              										data:[${review1.avg1}, ${review2.avg2}, ${review3.avg3}, ${review4.avg4}, ${review5.avg5}]
               											
         							}]
         
