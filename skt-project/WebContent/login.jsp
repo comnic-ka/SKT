@@ -61,6 +61,39 @@
 
         </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js">
+        </script>
+        <div class="chart-container">
+        <canvas id="myChart"> 
+        </div>
+        </canvas>
+        <style>
+    .chart-container {
+        position: relative;
+        width: 20vw;
+        height: 20vh;
+    }
+</style>
+         <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+
+        new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ["M", "T", "W", "T", "F"],
+        datasets: [{
+              label: 'apples',
+              borderWidth: 1,
+              backgroundColor: "rgba(153, 255, 51, 0.4)",
+              borderColor:     "rgba(153, 255, 51, 1)",
+              data: [100,100,100,100,100]
+        }]
+        
+    },
+});
+       
+        </script>
+        
         
      <jsp:include page="page-footer.jsp"></jsp:include>
     
