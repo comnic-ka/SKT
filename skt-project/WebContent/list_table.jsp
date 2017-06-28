@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 
+${param.name}
 <sql:query var="table" dataSource="ds/lunch">
     ${param.sql}
 	<sql:param value="%${param.name}%" />
@@ -20,7 +21,7 @@
 				<tr>
 					<c:forEach var="data" items="${record}" varStatus="loop">
 						<c:if test="${loop.count == 1}">
-							<c:set var="id" value="${data}" />
+							<c:set var="lunchName" value="${data}" />
 						</c:if>
 						<td>${data}</td>
 					</c:forEach>

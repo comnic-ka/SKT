@@ -29,7 +29,7 @@
               
              
  		 		<div class="search-box">
-				<form action="" method="post">
+				<form action="utf" method="post">
 				<input type="search" name="name" size=20 placeholder="キーワードを入力してね">
 				<input type="submit" value="検索">
 				</form>
