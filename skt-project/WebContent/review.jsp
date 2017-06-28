@@ -121,6 +121,8 @@
               										borderWidth: 1,
              										backgroundColor: "rgba(153, 255, 51, 0.4)",
               										borderColor:     "rgba(153, 255, 51, 1)",
+              										
+              											
               										data:[${review1.avg1}, ${review2.avg2}, ${review3.avg3}, ${review4.avg4}, ${review5.avg5}]
               											
         							}]
@@ -128,6 +130,10 @@
     						},
     						options:{
     							scale:{
+    								pointLabels: {
+    							        fontSize: 20 //フォントサイズ
+    							      },
+    			
     								ticks:{
     									beginAtZero:true,
     						            max:5,
