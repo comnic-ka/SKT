@@ -53,6 +53,7 @@
 		<param-value>jp.co.comnic.skt.controller.UpdateAction</param-value>
 	</context-param>
 	
+	
 	<!-- Settings for JSP pages -->	
 	<servlet>
 		<servlet-name>Login</servlet-name>
