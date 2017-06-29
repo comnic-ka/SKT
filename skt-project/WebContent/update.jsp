@@ -35,10 +35,14 @@
 			<sql:query var="rs" dataSource="ds/lunch">
 				SELECT * FROM REVIEW WHERE lunch_name LIKE "${param.id}"
 			</sql:query>
+			<sql:query var="rs2" dataSource="ds/lunch">
+				SELECT * FROM LUNCH WHERE lunch_name LIKE "${param.id}"
+			</sql:query>
 		</c:if>
 		
 		
 		<c:set var="review" value="${rs.rows[0]}"/>
+		<c:set var="lunch" value="${rs2.rows[0]}"/>
 		
 		<div align="center">
 			<div class="form-border1">
@@ -49,7 +53,10 @@
 							<th><label for="name">Lunch Name </label></th>
 							<td><input name="name" value="${review.lunch_name}" required></td>
 						</tr>
-						
+						<tr>
+							<th><label for="name">Location </label></th>
+							<td><input name="name" value="${lunch.location}" required></td>
+						</tr>	
 						<tr>
 							<th><label for="name">Taste </label></th>
 							<td><input name="name" value="${review.taste}" required></td>
