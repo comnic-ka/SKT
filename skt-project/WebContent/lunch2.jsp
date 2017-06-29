@@ -21,19 +21,21 @@
                   <li><a href="edit.jsp">情報編集</a></li>
                 </ul>
                 
-			     <jsp:include page="log-header.jsp">
-				 <jsp:param  name="page" value="login"/>
-			 	 </jsp:include>
+			     
 			 	 
               </nav>
               
              
  		 		<div class="search-box">
 				<form action="" method="post">
-				<input type="search" name="name" size=20 placeholder="キーワードを入力してね">
+				<input type="search" name="name" size=20 placeholder="店名を入力してね">
 				<input type="submit" value="検索">
 				</form>
 				</div><br>
+				
+				<jsp:include page="log-header.jsp">
+				 <jsp:param  name="page" value="login"/>
+			 	 </jsp:include>
 				
             </div>
 		

@@ -17,9 +17,13 @@
 	<div class="list-table" align="center">
 		<table>
 			<tr>
+			<!--  
 				<c:forEach var="columnName" items="${table.columnNames}">
 					<th>${columnName}</th>
 				</c:forEach>
+				-->
+				<th>店名</th>
+				<th>場所</th>
 				<th colspan="2">
 			</tr>	
 			<c:forEach var="record" items="${table.rowsByIndex}">

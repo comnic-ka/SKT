@@ -30,13 +30,16 @@
 
                 </ul>
                 
-			     <jsp:include page="log-header.jsp">
-				 <jsp:param  name="page" value="login"/>
-			 	 </jsp:include>
+			     
                   
               </nav>
             </div>
+            
+            
           </div>
+          <jsp:include page="log-header.jsp">
+				 <jsp:param  name="page" value="login"/>
+			 	 </jsp:include>
 
           <div class="inner cover">
             <h2 class="cover-heading">そうだ、お昼ご飯を探そう！</h2>

@@ -21,13 +21,13 @@
                   <li><a href="lunch.jsp">お昼ご飯情報</a></li>
 
                 </ul>
-			     <jsp:include page="log-header.jsp">
-				 <jsp:param  name="page" value="login"/>
-			 	 </jsp:include>
+			     
               </nav>
             </div>
           </div>
-
+<jsp:include page="log-header.jsp">
+				 <jsp:param  name="page" value="login"/>
+			 	 </jsp:include>
     <div align="center">
     	<div class="form-border">
       	<form method="post" action= "login.do">
@@ -35,18 +35,18 @@
         <table>
          <tr>
           <td bgcolor="#fd5b78">
-            <b>email:</b>
+            <b>Eメール</b>
           </td>
           <td>
-            <input name = "email" size="20" placeholder="email">
+            <input name = "email" size="20" placeholder="メールアドレス">
             </td>
          </tr>
          <tr>
             <td bgcolor="#fd5b78">
-            <b>pass:</b>
+            <b>パスワード</b>
             </td>
           <td>
-          <input type ="password" name = "password" size="20" placeholder="pass">
+          <input type ="password" name = "password" size="20" placeholder="パスワード">
           </td>
         </tr>
        </table>

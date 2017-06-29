@@ -62,32 +62,32 @@
 				<form action="${param.action}" method="post">
 					<table>
 						<tr>
-							<th><label for="Name">Name</label></th>
+							<th><label for="Name">店名</label></th>
 							<td>${param.id}</td>
 						</tr>
 						<tr>
-							<th><label for="location">Location</label></th>
+							<th><label for="location">場所</label></th>
 							<td>${lunch.location}</td>
 						</tr>
 						<tr>
-							<th><label for="taste">Taste</label></th>
+							<th><label for="taste">味</label></th>
 							<td>${review1.avg1}</td>
 						</tr>
 						<tr>
-							<th><label for="price">Price</label></th>
+							<th><label for="price">価格</label></th>
 							<td>${review2.avg2}</td>
 						</tr>
 						<tr>
-							<th><label for="volume">Volume</label></th>
+							<th><label for="volume">量</label></th>
 							<td>${review3.avg3}</td>
 						</tr>
 						
 						<tr>
-							<th><label for="distances">Distances</label></th>
+							<th><label for="distances">距離</label></th>
 							<td>${review4.avg4}</td>
 						</tr>
 						<tr>
-							<th><label for="variety">Variety</label></th>
+							<th><label for="variety">種類</label></th>
 							<td>${review5.avg5}</td>
 						</tr>
 					</table>

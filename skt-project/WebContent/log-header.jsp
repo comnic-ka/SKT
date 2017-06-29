@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-  <p>Login user: ${loginUsername}
-  <a href="logout.do"> － Logout</a>
-  </p>
+  <p>ユーザ名: ${loginUsername}
+  <a href="logout.do"> － ログアウト</a>
+  </p><br>
 </html>

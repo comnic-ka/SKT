@@ -9,13 +9,15 @@
 
 	<div class="list-table" align="center">
 		<table>
-			<tr>
+		<tr>
+			<!--  
 				<c:forEach var="columnName" items="${table.columnNames}">
 					<th>${columnName}</th>
 				</c:forEach>
-				
-				
-			</tr>	
+				-->
+				<th>店名</th>
+				<th>場所</th>
+				</tr>
 			<c:forEach var="record" items="${table.rowsByIndex}">
 				<tr>
 					<c:forEach var="data" items="${record}" varStatus="loop">

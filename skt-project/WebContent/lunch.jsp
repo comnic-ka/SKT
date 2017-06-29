@@ -21,27 +21,32 @@
                   <li class="active"><a href="lunch.jsp">お昼ご飯情報</a></li>
                 </ul>
                 
-			     <jsp:include page="log-header.jsp">
-				 <jsp:param  name="page" value="login"/>
-			 	 </jsp:include>
+			    
 			 	 
               </nav>
-              
              
+				
+            </div>
+            
+            
+      		</div>
+      		
+      		
+			 	 
  		 		<div class="search-box">
 				<form action="" method="post">
-				<input type="search" name="name" size=20 placeholder="キーワードを入力してね">
+				<input type="search" name="name" size=20 placeholder="店名を入力してね">
 				<input type="submit" value="検索">
 				</form>
 				</div><br>
-				
-            </div>
+				<jsp:include page="log-header.jsp">
+				 <jsp:param  name="page" value="login"/>
+			 	 </jsp:include>
 		
             		<jsp:include page="list_table.jsp">
 		    		<jsp:param name="sql" value="SELECT * FROM LUNCH  WHERE lunch_name LIKE ?"/>
 					<jsp:param name="table" value="Lunch"/>
 					</jsp:include>
-      		</div>
       		
       				<br>
 					<a href="lunch.jsp">← 一覧へ戻る</a>
@@ -49,8 +54,11 @@
 					<div class="inner">
 					<p>Copyright © <a href="http://www.comnic.co.jp/">comnic</a>-javalesson 2017</p>
 					</div>
+      		
    		 </div>
+   		 
     </div>
+    
 
     
 
