@@ -43,7 +43,7 @@
 		<div align="center">
 			<div class="form-border1">
 				<h3>更新</h3>
-				<form action="edit.do" method="post">
+				<form action="${param.action}" method="post">
 					<table>
 						<tr>
 							<th><label for="name">Lunch Name </label></th>

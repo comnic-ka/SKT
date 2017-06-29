@@ -42,9 +42,9 @@ public class ControllerUtils {
 		System.out.println(servletPath);
 		if ("/insert.do".equals(servletPath)) {
 			className = "Account";
-		} else if ("/insertBento.do".equals(servletPath) || "/RemoveBento.do".equals(servletPath)) {
+		} else if ("/insertBento.do".equals(servletPath) || "/RemoveBento.do".equals(servletPath) || "/edit.do".equals(servletPath)) {
 			className = "Lunch";
-		}else if ("/review.do".equals(servletPath) || "/edit.do".equals(servletPath)) {
+		}else if ("/review.do".equals(servletPath)) {
 			className = "Review";
 		}
 		String packageName = "jp.co.comnic.skt.entity.";
