@@ -37,7 +37,6 @@
 			</sql:query>
 		</c:if>
 		
-		
 		<c:set var="review" value="${rs.rows[0]}"/>
 		
 		<div align="center">
@@ -49,10 +48,7 @@
 							<th><label for="name">Lunch Name </label></th>
 							<td><input name="name" value="${review.lunch_name}" required></td>
 						</tr>
-						<tr>
-							<th><label for="name">Location </label></th>
-							<td><input name="name" value="${lunch.location}" required></td>
-						</tr>
+						
 						<tr>
 							<th><label for="name">Taste </label></th>
 							<td><input name="name" value="${review.taste}" required></td>
